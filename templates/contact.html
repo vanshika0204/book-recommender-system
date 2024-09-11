@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Book Recommender System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #1c1c1e;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            background-color: #00a65a;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav > li > a {
+            color: white;
+            font-size: 18px;
+        }
+
+        .nav > li > a:hover {
+            background-color: #388e3c;
+        }
+
+        .contact-header {
+            font-size: 50px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #00a65a;
+            padding-bottom: 20px;
+        }
+
+
+
+        .form-control-lg {
+            background-color: #333;
+            color: #fff;
+            border-radius: 8px;
+            border: 1px solid #444;
+            margin-bottom: 20px;
+        }
+
+        .form-control-lg:focus {
+            background-color: #444;
+            border-color: #00a65a;
+        }
+
+        .btn-warning {
+            background-color: #ffca28;
+            border-color: #ffca28;
+            color: #1c1c1e;
+            width: 100%;
+        }
+
+        .btn-warning:hover {
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 18px;
+        }
+
+        .contact-info h3 {
+            color: #ffca28;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            color: #bdbdbd;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-header {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .contact-header {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand">My Book Recommender</a>
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/recommend">Recommendation</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <div class="container" style="margin-top: 100px;">
+        <h1 class="contact-header">Contact Us</h1>
+
+        <div class="row">
+            <div class="col-md-12 offset-md-2">
+                <form action="/send_message" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control form-control-lg" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control form-control-lg" name="message" rows="6" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-warning">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>Email: info@bookrecommender.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+    </div>
+
+</body>
+</html>
